@@ -1,8 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import MainLayout from "./components/MainLayout.vue";
-import Dashboard from "./pages/Dashboard.vue";
-import Educations from "./pages/Educations.vue";
-import Experiences from "./pages/Experiences.vue";
 
 const routes = [
   {
@@ -11,15 +8,15 @@ const routes = [
     children: [
       {
         path: "dashboard",
-        component: Dashboard,
+        component: () => import("./pages/Dashboard.vue"),
       },
       {
         path: "data/educations",
-        component: Educations,
+        component: () => import("./pages/Educations.vue"),
       },
       {
         path: "data/experiences",
-        component: Experiences,
+        component: () => import("./pages/Experiences.vue"),
       },
     ],
   },

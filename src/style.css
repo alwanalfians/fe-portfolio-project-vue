@@ -2,3 +2,72 @@ body {
   padding: 0;
   margin: 0;
 }
+
+/* Optimize content visibility */
+.off-screen {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+}
+
+/* Optimize image loading */
+img {
+    aspect-ratio: attr(width) / attr(height);
+    content-visibility: auto;
+}
+
+/* Optimize chart containers */
+.chart-container {
+    min-height: 300px;
+    content-visibility: auto;
+    contain-intrinsic-size: 0 300px;
+}
+
+/* Optimize table containers */
+.table-container {
+    min-height: 400px;
+    content-visibility: auto;
+    contain-intrinsic-size: 0 400px;
+}
+
+/* Loading state transitions */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+/* Optimize layout containers */
+.layout-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Prevent layout shifts during loading */
+.skeleton-container {
+    position: relative;
+    min-height: inherit;
+}
+
+/* Optimize font loading */
+@font-face {
+    font-family: 'CustomFont';
+    font-display: swap;
+    src: local('CustomFont');
+}
+
+/* Optimize critical rendering path */
+.critical {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 100px;
+}
+
+/* Optimize non-critical content */
+.non-critical {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 200px;
+}

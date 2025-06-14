@@ -1,6 +1,6 @@
 <script>
 import { ProfileOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons-vue';
-import HeaderTable from '../components/HeaderTable.vue';
+import { defineAsyncComponent } from 'vue';
 import { message } from 'ant-design-vue';
 import { ref } from 'vue';
 import { parseTimestamptzToDateString } from '../helper';
@@ -84,6 +84,8 @@ const columns = [
         slots: { customRender: 'action' },
     },
 ]
+
+const HeaderTable = defineAsyncComponent(() => import('../components/HeaderTable.vue'));
 
 const editData = (name) => {
     message.info(`Edit Data ${name}`);

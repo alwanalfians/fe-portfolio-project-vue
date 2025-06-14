@@ -1,8 +1,10 @@
 <script>
-import UserEngagementChart from '../components/charts/UserEngagementChart.vue';
-import ContentPerformanceChart from '../components/charts/ContentPerformanceChart.vue';
-import TrafficSourcesChart from '../components/charts/TrafficSourcesChart.vue';
-import PublishingActivityChart from '../components/charts/PublishingActivityChart.vue';
+import {
+    UserEngagementChart,
+    ContentPerformanceChart,
+    TrafficSourcesChart,
+    PublishingActivityChart
+} from '../components/charts';
 import { ArrowDownOutlined, ArrowUpOutlined, LikeOutlined, DashboardOutlined } from '@ant-design/icons-vue';
 
 export default {

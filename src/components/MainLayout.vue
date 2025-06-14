@@ -1,9 +1,11 @@
 <script setup>
-import HeadBar from './HeadBar.vue';
-import SideBar from './SideBar.vue';
-import BreadCrumbBar from './BreadCrumbBar.vue';
-import ContentSection from './ContentSection.vue';
-import FootBar from './FootBar.vue'
+import {
+    HeadBar,
+    SideBar,
+    BreadCrumbBar,
+    ContentSection,
+    FootBar
+} from './layout';
 </script>
 
 <template>
